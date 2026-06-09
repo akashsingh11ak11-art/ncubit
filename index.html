@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nCubit Education | Premium Mentoring in Belgharia</title>
+    
+    <!-- Open Graph Tags (WhatsApp/Facebook Link Preview Setup) -->
+    <meta property="og:title" content="nCubit Education | Premium Mentoring">
+    <meta property="og:description" content="Expert 1-on-1 guidance in small batches (5-6 students) for Class V to XII & JEE/WBJEE in Belgharia. Admissions Open!">
+    <meta property="og:image" content="https://i.ibb.co/HTvN7zTY/Whats-App-Image-2026-06-07-at-3-23-43-PM.jpg">
+    <meta property="og:url" content="https://ncubit.in">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- Premium Fonts: Montserrat for Headings, Poppins for Body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
     <style>
         body { font-family: 'Poppins', sans-serif; background-color: #fafafa; overflow-x: hidden; }
         .heading-font { font-family: 'Montserrat', sans-serif; }
@@ -24,67 +34,35 @@
         .brand-accent-border { border-color: #DC2626; }
 
         /* Color Changing Card Animation (Dark Blue on Hover) */
-        .hover-color-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+        .hover-color-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .hover-color-card:hover {
-            background-color: #111827; /* Dark Blue */
-            transform: translateY(-10px);
+            background-color: #111827; transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(17, 24, 39, 0.4), 0 10px 10px -5px rgba(17, 24, 39, 0.2);
         }
-        /* Changing text colors inside the card on hover */
-        .hover-color-card:hover h3,
-        .hover-color-card:hover p {
-            color: #ffffff !important;
-        }
-        /* Changing icon box inside the card on hover */
-        .hover-color-card:hover .icon-box {
-            background-color: #ffffff !important;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        .hover-color-card:hover .icon-box i {
-            color: #111827 !important; /* Dark Blue icon on hover */
-        }
-        /* Changing the small tags inside the card on hover */
-        .hover-color-card:hover .tag-span {
-            background-color: rgba(255, 255, 255, 0.15) !important;
-            color: #ffffff !important;
-            border-color: rgba(255, 255, 255, 0.2) !important;
-        }
+        .hover-color-card:hover h3, .hover-color-card:hover p { color: #ffffff !important; }
+        .hover-color-card:hover .icon-box { background-color: #ffffff !important; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .hover-color-card:hover .icon-box i { color: #111827 !important; }
+        .hover-color-card:hover .tag-span { background-color: rgba(255, 255, 255, 0.15) !important; color: #ffffff !important; border-color: rgba(255, 255, 255, 0.2) !important; }
 
         /* Floating WhatsApp */
         .whatsapp-float {
-            position: fixed; bottom: 20px; right: 20px;
-            background-color: #25d366; color: #FFF;
-            border-radius: 50%; font-size: 32px; z-index: 100;
-            width: 60px; height: 60px;
+            position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: #FFF;
+            border-radius: 50%; font-size: 32px; z-index: 100; width: 60px; height: 60px;
             display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); 
-            border: 2px solid white; transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); border: 2px solid white; transition: all 0.3s ease;
         }
-        @media (min-width: 768px) {
-            .whatsapp-float { bottom: 30px; right: 30px; width: 65px; height: 65px; font-size: 35px; }
-        }
+        @media (min-width: 768px) { .whatsapp-float { bottom: 30px; right: 30px; width: 65px; height: 65px; font-size: 35px; } }
         .whatsapp-float:hover { transform: scale(1.1) translateY(-5px); }
 
         /* Form styling */
-        .form-input {
-            width: 100%; padding: 12px 16px; margin: 8px 0;
-            border: 2px solid #e2e8f0; border-radius: 12px;
-            background-color: #f8fafc; transition: all 0.3s ease;
-            font-family: 'Poppins', sans-serif; font-size: 14px;
-        }
-        .form-input:focus {
-            outline: none; border-color: #DC2626; background-color: #fff;
-            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
-        }
+        .form-input { width: 100%; padding: 12px 16px; margin: 8px 0; border: 2px solid #e2e8f0; border-radius: 12px; background-color: #f8fafc; transition: all 0.3s ease; font-family: 'Poppins', sans-serif; font-size: 14px; }
+        .form-input:focus { outline: none; border-color: #DC2626; background-color: #fff; box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2); }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        /* General Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        @keyframes floatImage { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
+        .animate-float { animation: floatImage 4s ease-in-out infinite; }
     </style>
 </head>
 <body class="text-slate-800">
@@ -94,11 +72,12 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- 2. NAVBAR (Mobile Optimized) -->
+    <!-- 2. NAVBAR -->
     <nav class="bg-white shadow-lg fixed w-full z-50 border-b-4 brand-accent-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 md:h-20">
                 <div class="flex-shrink-0 flex items-center gap-2 md:gap-3">
+                    <!-- ANIMATION REMOVED FROM LOGO HERE -->
                     <img src="https://i.ibb.co/HTvN7zTY/Whats-App-Image-2026-06-07-at-3-23-43-PM.jpg" alt="nCubit Logo" class="h-10 md:h-14 w-auto rounded-full border border-slate-200 shadow-sm">
                     <span class="heading-font text-xl md:text-2xl font-black tracking-tight brand-blue-text">nCubit</span>
                 </div>
@@ -106,17 +85,17 @@
                     <a href="#about" class="font-semibold text-slate-700 hover:text-red-600 transition-colors uppercase tracking-wide text-sm">About</a>
                     <a href="#courses" class="font-semibold text-slate-700 hover:text-red-600 transition-colors uppercase tracking-wide text-sm">Courses</a>
                     <a href="#faculty" class="font-semibold text-slate-700 hover:text-red-600 transition-colors uppercase tracking-wide text-sm">Faculty</a>
-                    <a href="#gallery" class="font-semibold text-slate-700 hover:text-red-600 transition-colors uppercase tracking-wide text-sm">Gallery</a>
+                    <a href="#achievers" class="font-semibold text-slate-700 hover:text-red-600 transition-colors uppercase tracking-wide text-sm">Achievers</a>
                 </div>
                 <div>
                     <!-- CALL US BUTTON -->
-                    <a href="tel:+917044647356" class="brand-accent text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-bold shadow-lg hover:bg-red-700 transition-all text-xs md:text-sm uppercase tracking-wide"><i class="fas fa-phone-alt mr-2"></i>Call Us</a>
+                    <a href="tel:+917044647356" class="brand-accent text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-bold shadow-lg hover:bg-red-700 transition-transform transform hover:scale-105 inline-block text-xs md:text-sm uppercase tracking-wide"><i class="fas fa-phone-alt mr-2"></i>Call Us</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- 3. HERO SECTION (Mobile Optimized) -->
+    <!-- 3. HERO SECTION -->
     <section class="relative pt-24 pb-16 md:pt-32 md:pb-20 brand-blue text-white overflow-hidden min-h-[80vh] flex items-center">
         <!-- Background Overlay Image -->
         <div class="absolute inset-0 z-0 opacity-10 md:opacity-20">
@@ -135,14 +114,14 @@
                     Expert 1-on-1 guidance in small batches (5-6 students) for <span class="font-bold text-white">Class V to XII</span>, <span class="font-bold text-white">CBSE/ICSE/ISC/WB</span>, and <span class="font-bold text-red-400">JEE Mains & Adv</span>.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#contact" class="brand-accent text-white font-black py-3 md:py-4 px-8 rounded-full shadow-xl hover:bg-red-700 transition-all uppercase tracking-wide text-sm md:text-base">Book a Free Demo</a>
+                    <a href="#contact" class="brand-accent text-white font-black py-3 md:py-4 px-8 rounded-full shadow-xl hover:bg-red-700 transition-transform transform hover:-translate-y-1 uppercase tracking-wide text-sm md:text-base">Book a Free Demo</a>
                 </div>
             </div>
             
             <!-- Hero Images Grid -->
             <div class="hidden sm:grid grid-cols-2 gap-4 mt-8 md:mt-0">
-                <img src="https://i.ibb.co/WN897gz6/Whats-App-Image-2026-06-08-at-11-57-55-AM.jpg" class="rounded-2xl shadow-2xl border-4 border-white/10 w-full h-32 md:h-48 object-cover transform translate-y-4 md:translate-y-8">
-                <img src="https://i.ibb.co/Pz4cCR2M/Whats-App-Image-2026-06-08-at-12-01-15-PM.jpg" class="rounded-2xl shadow-2xl border-4 border-white/10 w-full h-32 md:h-48 object-cover transform -translate-y-2 md:-translate-y-4">
+                <img src="https://i.ibb.co/WN897gz6/Whats-App-Image-2026-06-08-at-11-57-55-AM.jpg" class="rounded-2xl shadow-2xl border-4 border-white/10 w-full h-32 md:h-48 object-cover transform translate-y-4 md:translate-y-8 animate-float" style="animation-delay: 0.5s;">
+                <img src="https://i.ibb.co/Pz4cCR2M/Whats-App-Image-2026-06-08-at-12-01-15-PM.jpg" class="rounded-2xl shadow-2xl border-4 border-white/10 w-full h-32 md:h-48 object-cover transform -translate-y-2 md:-translate-y-4 animate-float">
             </div>
         </div>
     </section>
@@ -152,8 +131,8 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
                 <div class="order-2 md:order-1 relative px-4 md:px-0">
-                    <div class="absolute inset-0 bg-red-100 rounded-3xl transform -translate-x-2 translate-y-2 md:-translate-x-4 md:translate-y-4 -z-10"></div>
-                    <img src="https://i.ibb.co/5htT1JSz/Whats-App-Image-2026-06-08-at-12-35-59-PM.jpg" alt="nCubit Students" class="rounded-3xl shadow-xl w-full h-auto object-cover border-4 border-white">
+                    <div class="absolute inset-0 bg-red-100 rounded-3xl transform -translate-x-2 translate-y-2 md:-translate-x-4 md:translate-y-4 -z-10 transition-transform duration-500 hover:translate-x-0 hover:translate-y-0"></div>
+                    <img src="https://i.ibb.co/5htT1JSz/Whats-App-Image-2026-06-08-at-12-35-59-PM.jpg" alt="nCubit Students" class="rounded-3xl shadow-xl w-full h-auto object-cover border-4 border-white transition-transform duration-500 hover:scale-[1.02]">
                 </div>
                 <div class="order-1 md:order-2 text-center md:text-left">
                     <h2 class="heading-font text-3xl md:text-5xl font-black brand-blue-text mb-4 md:mb-6">Why Choose nCubit?</h2>
@@ -161,11 +140,10 @@
                         Since 2019, nCubit has been dedicated to providing quality education in Belgharia. We believe in personal attention, which is why we strictly maintain <span class="font-bold text-red-600 bg-red-50 px-2 py-1 rounded">small batches of 5 to 6 students</span>.
                     </p>
                     <ul class="space-y-4 md:space-y-5 text-slate-800 font-medium text-sm md:text-base text-left">
-                        <li class="flex items-center gap-4 bg-slate-50 p-3 md:p-4 rounded-xl shadow-sm"><i class="fas fa-bullseye text-red-600 text-xl md:text-2xl"></i> One-on-One Guidance & Monitoring</li>
-                        <li class="flex items-center gap-4 bg-slate-50 p-3 md:p-4 rounded-xl shadow-sm"><i class="fas fa-book-open text-red-600 text-xl md:text-2xl"></i> Expertise in CBSE, ICSE, ISC & WB Boards</li>
-                        <li class="flex items-center gap-4 bg-slate-50 p-3 md:p-4 rounded-xl shadow-sm"><i class="fas fa-rocket text-red-600 text-xl md:text-2xl"></i> Mentoring for IIT JEE & WBJEE</li>
-                        <!-- ADDED 15+ YEARS EXPERIENCE HERE -->
-                        <li class="flex items-center gap-4 bg-slate-50 p-3 md:p-4 rounded-xl shadow-sm"><i class="fas fa-user-graduate text-red-600 text-xl md:text-2xl"></i> 15+ Years Experienced Faculty </li>
+                        <li class="flex items-center gap-4 bg-slate-50 p-3 md:p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"><i class="fas fa-bullseye text-red-600 text-xl md:text-2xl"></i> One-on-One Guidance & Monitoring</li>
+                        <li class="flex items-center gap-4 bg-slate-50 p-3 md:p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"><i class="fas fa-book-open text-red-600 text-xl md:text-2xl"></i> Expertise in CBSE, ICSE, ISC & WB Boards</li>
+                        <li class="flex items-center gap-4 bg-slate-50 p-3 md:p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"><i class="fas fa-rocket text-red-600 text-xl md:text-2xl"></i> Mentoring for IIT JEE & WBJEE</li>
+                        <li class="flex items-center gap-4 bg-slate-50 p-3 md:p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"><i class="fas fa-user-graduate text-red-600 text-xl md:text-2xl"></i> 15+ Years Experienced Faculty from Jadavpur University</li>
                     </ul>
                 </div>
             </div>
@@ -226,7 +204,7 @@
         </div>
     </section>
 
-    <!-- 6. FACULTY SECTION (Updated Descriptions) -->
+    <!-- 6. FACULTY SECTION -->
     <section id="faculty" class="py-16 md:py-24 bg-white border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <span class="text-red-600 font-bold uppercase tracking-widest text-xs md:text-sm mb-2 block">Our Mentors</span>
@@ -242,7 +220,6 @@
                     <div class="p-6 md:p-8 text-center bg-white relative z-10">
                         <h3 class="heading-font text-xl md:text-2xl font-black brand-blue-text">Nabanita Ma'am</h3>
                         <p class="text-red-600 font-bold mb-2 md:mb-3 text-sm md:text-base tracking-wide">M.E. (J.U.)</p>
-                        <!-- OLD TEXT REVERTED -->
                         <p class="text-xs md:text-sm text-slate-500 font-medium">Expert guidance for Science and competitive preparations.</p>
                     </div>
                 </div>
@@ -255,7 +232,6 @@
                     <div class="p-6 md:p-8 text-center bg-white relative z-10">
                         <h3 class="heading-font text-xl md:text-2xl font-black brand-blue-text">Chayan Sir</h3>
                         <p class="text-red-600 font-bold mb-2 md:mb-3 text-sm md:text-base tracking-wide">M.E. (J.U.)</p>
-                        <!-- ADDED JEE & MATH EXPERT -->
                         <p class="text-xs md:text-sm text-slate-500 font-medium">JEE & Mathematics Expert with deep conceptual mentoring.</p>
                     </div>
                 </div>
@@ -263,84 +239,97 @@
         </div>
     </section>
 
-    <!-- 7. OUR ACHIEVERS (Brought back the 9 Achievers) -->
+    <!-- 7. OUR ACHIEVERS (10 Achievers in Grid) -->
     <section id="achievers" class="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <span class="text-red-600 font-bold uppercase tracking-widest text-xs md:text-sm mb-2 block">Wall of Fame</span>
             <h2 class="heading-font text-3xl md:text-5xl font-black brand-blue-text mb-10 md:mb-14">Our Top Achievers</h2>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-                <!-- Achiever 1 -->
-                <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://i.ibb.co/j99YkkYD/ncubit.jpg" alt="Sohan Bhattacharya" class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-red-100 mb-4 shadow-sm">
-                    <h3 class="heading-font text-xl font-bold brand-blue-text text-center">Sohan Bhattacharya</h3>
-                    <p class="text-red-600 font-bold mt-1 text-lg">Math: 100</p>
-                    <p class="text-slate-500 text-sm font-medium mt-1">IIT Advance AIR 2559</p>
+            <!-- Grid Layout optimized for 10 cards (5 columns on large screens) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+                
+                <!-- 1. Sohan Bhattacharya -->
+                <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 flex flex-col items-center relative hover:-translate-y-2 transition-transform duration-300">
+                    <div class="absolute top-4 right-4 bg-red-100 text-red-700 text-[10px] font-bold px-2 py-1 rounded-full"><i class="fas fa-trophy mr-1"></i> AIR 2559</div>
+                    <img src="https://i.ibb.co/j99YkkYD/ncubit.jpg" alt="Sohan Bhattacharya" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-red-50 mb-4 shadow-sm">
+                    <h3 class="heading-font text-base md:text-lg font-bold brand-blue-text text-center">Sohan Bhattacharya</h3>
+                    <p class="text-red-600 font-black mt-2 text-lg md:text-xl">Math: 100</p>
+                    <p class="text-slate-500 text-xs font-medium mt-1">CBSE 2025 | Class 12th</p>
                 </div>
 
-                <!-- Achiever 2 -->
+                <!-- 2. Soumil Ghosh -->
                 <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://i.ibb.co/JjhGbt1Q/arkadip.jpg" alt="Arkadip De" class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-red-100 mb-4 shadow-sm">
-                    <h3 class="heading-font text-xl font-bold brand-blue-text text-center">Arkadip De</h3>
-                    <p class="text-red-600 font-bold mt-1 text-lg">Math: 92</p>
-                    <p class="text-slate-500 text-sm font-medium mt-1">IIT Mains: 98.26%ile</p>
+                    <img src="https://i.ibb.co/tMSktspc/soumi-gosh.jpg" alt="Soumil Ghosh" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-red-50 mb-4 shadow-sm">
+                    <h3 class="heading-font text-base md:text-lg font-bold brand-blue-text text-center">Soumil Ghosh</h3>
+                    <p class="text-red-600 font-black mt-2 text-lg md:text-xl">Math: 97</p>
+                    <p class="text-slate-500 text-xs font-medium mt-1">ICSE 2026 | Class 10th</p>
                 </div>
 
-                <!-- Achiever 3 -->
+                <!-- 3. Arush Das -->
                 <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://i.ibb.co/nq13PXRm/sirjitas.png" alt="Srijita Bhattacharyya" class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-red-100 mb-4 shadow-sm">
-                    <h3 class="heading-font text-xl font-bold brand-blue-text text-center">Srijita Bhattacharyya</h3>
-                    <p class="text-red-600 font-bold mt-1 text-lg">Math: 91</p>
-                    <p class="text-slate-500 text-sm font-medium mt-1">Class 10th</p>
+                    <img src="https://i.ibb.co/ksXkxPmg/rush.jpg" alt="Arush Das" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-red-50 mb-4 shadow-sm">
+                    <h3 class="heading-font text-base md:text-lg font-bold brand-blue-text text-center">Arush Das</h3>
+                    <p class="text-red-600 font-black mt-2 text-lg md:text-xl">Math: 97</p>
+                    <p class="text-slate-500 text-xs font-medium mt-1">ICSE 2026 | Class 10th</p>
                 </div>
 
-                <!-- Achiever 4 -->
+                <!-- 4. Snehal Ghatak -->
                 <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://i.ibb.co/9JXGyH0/protesya.png" alt="Protyasa Banik" class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-red-100 mb-4 shadow-sm">
-                    <h3 class="heading-font text-xl font-bold brand-blue-text text-center">Protyasa Banik</h3>
-                    <p class="text-red-600 font-bold mt-1 text-lg">Science: 95</p>
-                    <p class="text-slate-500 text-sm font-medium mt-1">Class 10th</p>
+                    <img src="https://i.ibb.co/nqFG9L52/snehal.jpg" alt="Snehal Ghatak" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-red-50 mb-4 shadow-sm">
+                    <h3 class="heading-font text-base md:text-lg font-bold brand-blue-text text-center">Snehal Ghatak</h3>
+                    <p class="text-red-600 font-black mt-2 text-lg md:text-xl">Math: 95</p>
+                    <p class="text-slate-500 text-xs font-medium mt-1">CBSE 2026 | Class 10th</p>
                 </div>
 
-                <!-- Achiever 5 -->
+                <!-- 5. Areenjay Das -->
                 <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://i.ibb.co/nqFG9L52/snehal.jpg" alt="Snehal Ghatak" class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-red-100 mb-4 shadow-sm">
-                    <h3 class="heading-font text-xl font-bold brand-blue-text text-center">Snehal Ghatak</h3>
-                    <p class="text-red-600 font-bold mt-1 text-lg">Math: 95</p>
-                    <p class="text-slate-500 text-sm font-medium mt-1">Class 10th</p>
+                    <img src="https://i.ibb.co/Ld41cFt3/arnajay.jpg" alt="Areenjay Das" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-red-50 mb-4 shadow-sm">
+                    <h3 class="heading-font text-base md:text-lg font-bold brand-blue-text text-center">Areenjay Das</h3>
+                    <p class="text-red-600 font-black mt-2 text-lg md:text-xl">Math: 95</p>
+                    <p class="text-slate-500 text-xs font-medium mt-1">CBSE 2026 | Class 10th</p>
                 </div>
 
-                <!-- Achiever 6 -->
+                <!-- 6. Protyasa Banik -->
                 <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://i.ibb.co/Ld41cFt3/arnajay.jpg" alt="Areenjay Das" class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-red-100 mb-4 shadow-sm">
-                    <h3 class="heading-font text-xl font-bold brand-blue-text text-center">Areenjay Das</h3>
-                    <p class="text-red-600 font-bold mt-1 text-lg">Math: 95</p>
-                    <p class="text-slate-500 text-sm font-medium mt-1">Class 10th</p>
+                    <img src="https://i.ibb.co/9JXGyH0/protesya.png" alt="Protyasa Banik" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-red-50 mb-4 shadow-sm">
+                    <h3 class="heading-font text-base md:text-lg font-bold brand-blue-text text-center">Protyasa Banik</h3>
+                    <p class="text-red-600 font-black mt-2 text-lg md:text-xl">Science: 95</p>
+                    <p class="text-slate-500 text-xs font-medium mt-1">CBSE 2026 | Class 10th</p>
                 </div>
 
-                <!-- Achiever 7 -->
+                <!-- 7. Srijita Bhattacharyya -->
                 <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://i.ibb.co/cXb1hrhx/swarnaya.jpg" alt="Swarnava Pal" class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-red-100 mb-4 shadow-sm">
-                    <h3 class="heading-font text-xl font-bold brand-blue-text text-center">Swarnava Pal</h3>
-                    <p class="text-red-600 font-bold mt-1 text-lg">Math: 86</p>
-                    <p class="text-slate-500 text-sm font-medium mt-1">Class 10th</p>
+                    <img src="https://i.ibb.co/nq13PXRm/sirjitas.png" alt="Srijita Bhattacharyya" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-red-50 mb-4 shadow-sm">
+                    <h3 class="heading-font text-base md:text-lg font-bold brand-blue-text text-center">Srijita Bhattacharyya</h3>
+                    <p class="text-red-600 font-black mt-2 text-lg md:text-xl">Math: 91</p>
+                    <p class="text-slate-500 text-xs font-medium mt-1">CBSE 2026 | Class 10th</p>
                 </div>
 
-                <!-- Achiever 8 -->
+                <!-- 8. Ankita Ghosh -->
                 <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://i.ibb.co/ksXkxPmg/rush.jpg" alt="Arush Das" class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-red-100 mb-4 shadow-sm">
-                    <h3 class="heading-font text-xl font-bold brand-blue-text text-center">Arush Das</h3>
-                    <p class="text-red-600 font-bold mt-1 text-lg">Math: 97</p>
-                    <p class="text-slate-500 text-sm font-medium mt-1">Class 10th</p>
+                    <img src="https://i.ibb.co/7DhKLMm/ankita-gosh.jpg" alt="Ankita Ghosh" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-red-50 mb-4 shadow-sm">
+                    <h3 class="heading-font text-base md:text-lg font-bold brand-blue-text text-center">Ankita Ghosh</h3>
+                    <p class="text-red-600 font-black mt-2 text-lg md:text-xl">Math: 97</p>
+                    <p class="text-slate-500 text-xs font-medium mt-1">CBSE 2025 | Class 10th</p>
                 </div>
 
-                <!-- Achiever 9 -->
+                <!-- 9. Nibir Bhattacharjee -->
                 <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://i.ibb.co/9mKzXwBG/arushi.jpg" alt="Arushi Banerjee" class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-red-100 mb-4 shadow-sm">
-                    <h3 class="heading-font text-xl font-bold brand-blue-text text-center">Arushi Banerjee</h3>
-                    <p class="text-red-600 font-bold mt-1 text-lg">Math: 93</p>
-                    <p class="text-slate-500 text-sm font-medium mt-1">Class 10th</p>
+                    <img src="https://i.ibb.co/N2wFKZ7Y/nibir.jpg" alt="Nibir Bhattacharjee" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-red-50 mb-4 shadow-sm">
+                    <h3 class="heading-font text-base md:text-lg font-bold brand-blue-text text-center">Nibir Bhattacharjee</h3>
+                    <p class="text-red-600 font-black mt-2 text-lg md:text-xl">Math: 95</p>
+                    <p class="text-slate-500 text-xs font-medium mt-1">CBSE 2025 | Class 10th</p>
                 </div>
+
+                <!-- 10. Souparna Kundu -->
+                <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 flex flex-col items-center relative hover:-translate-y-2 transition-transform duration-300">
+                    <div class="absolute top-4 right-4 bg-red-100 text-red-700 text-[10px] font-bold px-2 py-1 rounded-full"><i class="fas fa-star mr-1"></i> Top</div>
+                    <img src="https://i.ibb.co/tp7dRqFv/souparna.jpg" alt="Souparna Kundu" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-red-50 mb-4 shadow-sm">
+                    <h3 class="heading-font text-base md:text-lg font-bold brand-blue-text text-center">Souparna Kundu</h3>
+                    <p class="text-red-600 font-black mt-2 text-lg md:text-xl">Math: 94</p>
+                    <p class="text-slate-500 text-xs font-medium mt-1">ISC 2025 | Class 12th</p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -353,11 +342,11 @@
             <p class="text-slate-600 mb-10 md:mb-14 text-sm md:text-lg">Classroom moments, excursions, and focused studies.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
-                <img src="https://i.ibb.co/hR9nDtM1/Whats-App-Image-2026-06-08-at-11-58-24-AM.jpg" alt="Gallery 1" class="md:col-span-2 rounded-2xl shadow-sm w-full h-48 md:h-56 object-cover hover:scale-105 transition-all duration-300">
-                <img src="https://i.ibb.co/DfFKG6Cm/Whats-App-Image-2026-06-08-at-12-00-58-PM.jpg" alt="Gallery 2" class="md:col-span-2 rounded-2xl shadow-sm w-full h-48 md:h-56 object-cover hover:scale-105 transition-all duration-300">
-                <img src="https://i.ibb.co/fGD1SpgQ/Whats-App-Image-2026-06-08-at-11-57-55-AM.jpg" alt="Gallery 3" class="md:col-span-2 rounded-2xl shadow-sm w-full h-48 md:h-56 object-cover hover:scale-105 transition-all duration-300">
-                <img src="https://i.ibb.co/C5D22FvD/Whats-App-Image-2026-06-08-at-11-57-20-AM.jpg" alt="Gallery 4" class="md:col-span-3 rounded-2xl shadow-sm w-full h-48 md:h-64 object-cover hover:scale-105 transition-all duration-300">
-                <img src="https://i.ibb.co/M5CcxGR4/Whats-App-Image-2026-06-08-at-11-57-02-AM.jpg" alt="Gallery 5" class="md:col-span-3 rounded-2xl shadow-sm w-full h-48 md:h-64 object-cover hover:scale-105 transition-all duration-300">
+                <img src="https://i.ibb.co/hR9nDtM1/Whats-App-Image-2026-06-08-at-11-58-24-AM.jpg" alt="Gallery 1" class="md:col-span-2 rounded-2xl shadow-sm w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-300">
+                <img src="https://i.ibb.co/DfFKG6Cm/Whats-App-Image-2026-06-08-at-12-00-58-PM.jpg" alt="Gallery 2" class="md:col-span-2 rounded-2xl shadow-sm w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-300">
+                <img src="https://i.ibb.co/fGD1SpgQ/Whats-App-Image-2026-06-08-at-11-57-55-AM.jpg" alt="Gallery 3" class="md:col-span-2 rounded-2xl shadow-sm w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-300">
+                <img src="https://i.ibb.co/C5D22FvD/Whats-App-Image-2026-06-08-at-11-57-20-AM.jpg" alt="Gallery 4" class="md:col-span-3 rounded-2xl shadow-sm w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                <img src="https://i.ibb.co/M5CcxGR4/Whats-App-Image-2026-06-08-at-11-57-02-AM.jpg" alt="Gallery 5" class="md:col-span-3 rounded-2xl shadow-sm w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
             </div>
         </div>
     </section>
@@ -372,12 +361,12 @@
                 <!-- Review 1 -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-color-card">
                     <div class="flex text-yellow-400 text-xl mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-600 italic mb-6 text-sm md:text-base">"The institute has been very helpful. The teacher explains concepts clearly and patiently, making difficult topics easy to understand. Regular tests and doubt-clearing sessions have improved confidence."</p>
+                    <p class="text-slate-600 italic mb-6 text-sm md:text-base transition-colors duration-300">"The institute has been very helpful. The teacher explains concepts clearly and patiently, making difficult topics easy to understand. Regular tests and doubt-clearing sessions have improved confidence."</p>
                     <div class="flex items-center gap-3 border-t border-slate-100/30 pt-4">
-                        <div class="icon-box w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-700">A</div>
+                        <div class="icon-box w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-700 transition-colors duration-300">A</div>
                         <div>
-                            <p class="font-bold brand-blue-text text-sm">Arnav Agarwal</p>
-                            <p class="text-xs text-slate-400">Student</p>
+                            <p class="font-bold brand-blue-text text-sm transition-colors duration-300">Arnav Agarwal</p>
+                            <p class="text-xs text-slate-400 transition-colors duration-300">Student</p>
                         </div>
                     </div>
                 </div>
@@ -385,12 +374,12 @@
                 <!-- Review 2 -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-color-card">
                     <div class="flex text-yellow-400 text-xl mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-600 italic mb-6 text-sm md:text-base">"Good experience after joining this tuition. Maam have patience, kindness and understanding helped our child overcome challenges and develop a love for learning. We're forever grateful."</p>
+                    <p class="text-slate-600 italic mb-6 text-sm md:text-base transition-colors duration-300">"Good experience after joining this tuition. Maam have patience, kindness and understanding helped our child overcome challenges and develop a love for learning. We're forever grateful."</p>
                     <div class="flex items-center gap-3 border-t border-slate-100/30 pt-4">
-                        <div class="icon-box w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-700">M</div>
+                        <div class="icon-box w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-700 transition-colors duration-300">M</div>
                         <div>
-                            <p class="font-bold brand-blue-text text-sm">Moumita Roy</p>
-                            <p class="text-xs text-slate-400">Parent</p>
+                            <p class="font-bold brand-blue-text text-sm transition-colors duration-300">Moumita Roy</p>
+                            <p class="text-xs text-slate-400 transition-colors duration-300">Parent</p>
                         </div>
                     </div>
                 </div>
@@ -398,12 +387,12 @@
                 <!-- Review 3 -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-color-card">
                     <div class="flex text-yellow-400 text-xl mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-600 italic mb-6 text-sm md:text-base">"Great guidance with every week assessment and sample paper solve for better result. The best tution I have seen in my life. Great institute exceptional results!!"</p>
+                    <p class="text-slate-600 italic mb-6 text-sm md:text-base transition-colors duration-300">"Great guidance with every week assessment and sample paper solve for better result. The best tution I have seen in my life. Great institute exceptional results!!"</p>
                     <div class="flex items-center gap-3 border-t border-slate-100/30 pt-4">
-                        <div class="icon-box w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-700">A</div>
+                        <div class="icon-box w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-700 transition-colors duration-300">A</div>
                         <div>
-                            <p class="font-bold brand-blue-text text-sm">Arkaprava Saha</p>
-                            <p class="text-xs text-slate-400">Student</p>
+                            <p class="font-bold brand-blue-text text-sm transition-colors duration-300">Arkaprava Saha</p>
+                            <p class="text-xs text-slate-400 transition-colors duration-300">Student</p>
                         </div>
                     </div>
                 </div>
@@ -423,7 +412,7 @@
                     <p class="mb-8 md:mb-10 text-slate-300 text-sm md:text-lg font-light leading-relaxed">Secure your child's future with our expert mentoring. Fill out the form or reach us directly.</p>
                     
                     <div class="space-y-6 md:space-y-8 text-left">
-                        <div class="flex items-start gap-4 md:gap-5">
+                        <div class="flex items-start gap-4 md:gap-5 hover:transform hover:translate-x-2 transition-transform duration-300">
                             <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                                 <i class="fas fa-map-marker-alt text-red-500 text-lg md:text-xl"></i>
                             </div>
@@ -432,7 +421,7 @@
                                 <p class="text-slate-400 font-light text-sm md:text-base">30 Umesh Mukherjee Road, Belgharia,<br>near 17 Pally Club, Kolkata, Pin 700056</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-4 md:gap-5">
+                        <div class="flex items-start gap-4 md:gap-5 hover:transform hover:translate-x-2 transition-transform duration-300">
                             <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                                 <i class="fas fa-phone-alt text-red-500 text-lg md:text-xl"></i>
                             </div>
@@ -441,7 +430,7 @@
                                 <p class="text-slate-400 font-light text-sm md:text-base">70446 47356 / 90078 05198</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-4 md:gap-5">
+                        <div class="flex items-start gap-4 md:gap-5 hover:transform hover:translate-x-2 transition-transform duration-300">
                             <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                                 <i class="fas fa-envelope text-red-500 text-lg md:text-xl"></i>
                             </div>
